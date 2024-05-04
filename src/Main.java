@@ -19,10 +19,10 @@ public class Main {
 
 
     public static void first(String name) {
-        int panjang = name.length();
+        int length = name.length();
 
-        for (int i = 0; i < panjang; i++) {
-            for (int j = 0; j < panjang - i; j++) {
+        for (int i = 0; i < length; i++) {
+            for (int j = 0; j < length - i; j++) {
                 System.out.print(name.charAt(j) + " ");
             }
             for (int k = 0; k < i; k++) {
@@ -33,20 +33,19 @@ public class Main {
     }
 
     public static void second(String name) {
-        int panjang = name.length();
+        int length = name.length();
 
-        for (int i = 0; i < panjang; i++) {
-            // Loop untuk kolom
-            for (int j = 0; j < panjang; j++) {
+        for (int i = 0; i < length; i++) {
+            for (int j = 0; j < length; j++) {
                 if (j == i) {
                     System.out.print(name.charAt(j) + " ");
                 } else {
                     System.out.print("* ");
                 }
             }
-            // Pindah ke baris baru setelah setiap baris selesai dicetak
             System.out.println();
-        }    }
+        }
+    }
 
     public static void third(String name) {
         var centerIndex = name.length() / 2;
