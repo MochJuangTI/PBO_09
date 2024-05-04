@@ -49,14 +49,20 @@ public class Main {
         }    }
 
     public static void third(String name) {
-        int panjang = name.length();
+        var centerIndex = name.length() / 2;
 
         for (int i = 0; i < name.length(); i++) {
-            for (int j = 0; j < name.length(); j++) {
-                if (i == j) {
-                    System.out.print(name.charAt(j));
-                } else {
-                    System.out.print("*");
+            if (i == centerIndex) {
+                for (int j = 0; j < name.length(); j++) {
+                    System.out.print(name.charAt(j) + " ");
+                }
+            } else {
+                for (int j = 0; j < name.length(); j++) {
+                    if (j == centerIndex) {
+                        System.out.print(name.charAt(i) + " ");
+                    } else {
+                        System.out.print("* ");
+                    }
                 }
             }
             System.out.println();
